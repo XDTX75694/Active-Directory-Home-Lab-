@@ -1,7 +1,7 @@
 # Active Directory Home Lab
 # Objective
 
-This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry
+This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry.
 
 # Skills Learned
  ► Deployed a Windows Server 2022 domain controller (AD DS, DNS, Group Policy)
