@@ -29,9 +29,5 @@ This project simulates a small corporate network to practice real-world system a
 `PowerShell`
 `VMware`
 
+<img width="688" height="345" alt="AD Domin services " src="https://github.com/user-attachments/assets/d980c770-d539-473b-8c17-7b41f726da03" />
 
-
-
-
-
-*Ref 1: Network Diagram*
