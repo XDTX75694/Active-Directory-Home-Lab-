@@ -4,7 +4,11 @@
 This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry.
 
 # Skills Learned
+ ► Using and configuring virtual machines using VMware software
+ 
  ► Deployed a Windows Server 2022 domain controller (AD DS, DNS, Group Policy)
+
+ ► Configured and deployed Ubuntu server for ther use of Splunk
  
  ► Managed users, groups, and OUs via GUI and PowerShell
  
@@ -14,7 +18,7 @@ This project simulates a small corporate network to practice real-world system a
  
  ► Built Splunk dashboards to detect suspicious activity
  
- ► Simulated brute-force/lateral movement attacks from Kali
+ ► Simulated brute-force attack using Kali Linux
  
  ► Hardened environment with Firewall rules and Group Policy
 # Tools Used
@@ -43,7 +47,33 @@ This project simulates a small corporate network to practice real-world system a
 ## Windows Server 2022 Setup
 
 <img width="1919" height="1024" alt="server 22 ISO" src="https://github.com/user-attachments/assets/1ccf8153-2217-48d9-9566-33ff4d38dfbb" />
-Windows Server 2022 ISO file 
+Using the setup wizard to install Windows Server 2022 using an ISO file. 
+
+---
+
+
+<img width="1919" height="1000" alt="Server specs " src="https://github.com/user-attachments/assets/c760c1d4-5432-4874-8f97-dd21be9e7006" />
+Specs for the Windows Server include 50GB of hard drive space, 4096 MB or 4 GB of memory, and 4 CPU cores.  
+
+---
+
+<img width="908" height="668" alt="Server version " src="https://github.com/user-attachments/assets/8be2bd81-7982-4ade-9558-fd05e6b5c52c" />
+
+Selecting the version to use with Windows Server 2022. The highlighted version was chosen because it provides a graphical user interface (GUI).   
+
+---
+<img width="1203" height="820" alt="Admin" src="https://github.com/user-attachments/assets/11847fde-1e74-40ef-a852-20ee8e3bd9f1" />
+
+Administrator username and password are being created. 
+
+---
+<img width="1099" height="819" alt="Complete install" src="https://github.com/user-attachments/assets/4dd9642a-ab1d-4b32-964a-f990f7fdfbbb" />
+
+Installation of the server completed
+
+---
+<img width="1014" height="982" alt="Changing IP" src="https://github.com/user-attachments/assets/66555a7e-d571-4066-9e0e-7bec9cd31338" />
+To change the adapter settings and make a static IP, you go to the network icon, go to the taking you to network status, and then click Change adapter options under the Advanced network settings. Then right clicking Ethernet0 and click on Properties.     
 
 
 
