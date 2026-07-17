@@ -85,11 +85,12 @@ Installation of the server completed.
 
 ---
 <img width="1014" height="982" alt="Changing IP" src="https://github.com/user-attachments/assets/66555a7e-d571-4066-9e0e-7bec9cd31338" />
-To change the adapter settings and make a static IP, you go to the network icon, go to the taking you to network status, and then click Change adapter options under the Advanced network settings. Then right-click Ethernet0 and click on Properties.  
+To change the adapter settings and make a static IP, you go to the network icon, go to the taking you to the network status page, and then click Change adapter options under the Advanced network settings. Then right-click Ethernet0 and click on Properties.  
 
 ---
 <img width="500" height="500" alt="IP Version 4 " src="https://github.com/user-attachments/assets/0c63eccf-a362-4b00-8ffc-873609cde5a0" />
-After clicking Properties and double-clicking on Internet Protocol Version 4 (IPv4) to configure a static IP for the server. Static IP configuration shown below.
+
+After clicking Properties and double-clicking on Internet Protocol Version 4 (IPv4) to configure a static IP for the server. (The static IP configuration is shown below.)
 
 ---
 
