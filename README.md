@@ -8,7 +8,7 @@ This project simulates a small corporate network to practice real-world system a
  
  ► Deployed a Windows Server 2022 domain controller (AD DS, DNS, Group Policy)
 
- ► Configured and deployed Ubuntu server for ther use of Splunk
+ ► Configured and deployed Ubuntu server for the use of Splunk
  
  ► Managed users, groups, and OUs via GUI and PowerShell
  
@@ -21,8 +21,9 @@ This project simulates a small corporate network to practice real-world system a
  ► Simulated brute-force attack using Kali Linux
  
  ► Hardened environment with Firewall rules and Group Policy
-# Tools Used
-
+ ##
+ 
+## Tools Used
 `VMware`
 `Windows Server 2022`
 `Windows 10` 
@@ -34,6 +35,16 @@ This project simulates a small corporate network to practice real-world system a
 `PowerShell`
 `Scripting`
 
+---
+# Network Architecture
+
+ 
+<img width="600" height="775" alt="image" src="https://github.com/user-attachments/assets/7e3b95cb-77a6-4dbb-a500-a4842c790499" />
+
+
+
+*Router/switch layout connecting the Splunk server, Active Directory server, client machine, and attacker machine on the 192.168.10.0/24 network. The dashed line represents the Splunk Universal Forwarder log path from the client to the Splunk server.*
+ 
 ---
 ## Table of Contents
 - [Windows Server 2022 Setup](#windows-server-2022-setup)
@@ -57,7 +68,8 @@ Specs for the Windows Server include 50GB of hard drive space, 4096 MB or 4 GB o
 
 ---
 
-<img width="908" height="668" alt="Server version " src="https://github.com/user-attachments/assets/8be2bd81-7982-4ade-9558-fd05e6b5c52c" />
+
+<img width="908" height="668" alt="Server version " src="https://github.com/user-attachments/assets/35aae4af-955d-4c94-abf5-d9868f55534f" />
 
 Selecting the version to use with Windows Server 2022. The highlighted version was chosen because it provides a graphical user interface (GUI).   
 
@@ -69,11 +81,20 @@ Administrator username and password are being created.
 ---
 <img width="1099" height="819" alt="Complete install" src="https://github.com/user-attachments/assets/4dd9642a-ab1d-4b32-964a-f990f7fdfbbb" />
 
-Installation of the server completed
+Installation of the server completed.
 
 ---
 <img width="1014" height="982" alt="Changing IP" src="https://github.com/user-attachments/assets/66555a7e-d571-4066-9e0e-7bec9cd31338" />
-To change the adapter settings and make a static IP, you go to the network icon, go to the taking you to network status, and then click Change adapter options under the Advanced network settings. Then right clicking Ethernet0 and click on Properties.     
+To change the adapter settings and make a static IP, you go to the network icon, go to the taking you to network status, and then click Change adapter options under the Advanced network settings. Then right-click Ethernet0 and click on Properties.  
+
+---
+<img width="500" height="500" alt="IP Version 4 " src="https://github.com/user-attachments/assets/0c63eccf-a362-4b00-8ffc-873609cde5a0" />
+After clicking Properties and double-clicking on Internet Protocol Version 4 (IPv4) to configure a static IP for the server. Static IP configuration shown below.
+
+---
+
+<img width="600" height="550" alt="Static IP" src="https://github.com/user-attachments/assets/dd092605-1868-475f-8529-b0067d2ff99a" />
+
 
 
 
