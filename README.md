@@ -36,7 +36,7 @@ This project simulates a small corporate network to practice real-world system a
 `Scripting`
 
 ---
-# Network Diagram
+## Network Diagram
 
  
 <img width="600" height="775" alt="image" src="https://github.com/user-attachments/assets/7e3b95cb-77a6-4dbb-a500-a4842c790499" />
@@ -96,7 +96,7 @@ After clicking Properties and double-clicking on Internet Protocol Version 4 (IP
 
 <img width="600" height="550" alt="Static IP" src="https://github.com/user-attachments/assets/dd092605-1868-475f-8529-b0067d2ff99a" />
 
-[Reference the network diagram above](#network-architecture).
+[Reference the network diagram above](#network-diagram).
 
 ---
 
