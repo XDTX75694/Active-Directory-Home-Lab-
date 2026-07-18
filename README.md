@@ -173,14 +173,38 @@ Now that Active Directory has been installed, we want to create new users and Or
 <img width="500" height="500" alt="Created IT OU" src="https://github.com/user-attachments/assets/bd4fcb2c-aabb-4e4a-b301-90702108fb28" />
 
 
-I created two OUs: one for IT and one for HR. James White of IT and John Smith for HR. The OU and user for HR will be created using PowerShell, and the IT OU will be created in Active Directory. To create a new Organizational Unit (OU), right-click on `dale.local`, go down to New, and click on Organizational Unit. After creating the new OU, it will appear. 
+I created two OUs: one for IT and one for HR. James White of IT and John Smith of HR. The OU and user for HR will be created using PowerShell, and the IT OU will be created in Active Directory. To create a new Organizational Unit (OU), right-click on `dale.local`, go down to New, and click on Organizational Unit. After creating the new OU, it will appear. 
 
 ---
 <img width="988" height="455" alt="image" src="https://github.com/user-attachments/assets/0eb8e23e-763b-423d-96fc-146c37e4824c" />
 
-To add a new user to the OU, you right-click on the on IT, go to New, and select User.   
+To add a new user to the OU, right-click on IT, go to New, and select User.   
 ---
 
+<img width="833" height="538" alt="User created inside the new OU" src="https://github.com/user-attachments/assets/a627ef00-0ecc-4a31-8767-618cf3a9092e" />
+
+---
+
+<img width="768" height="510" alt="New user" src="https://github.com/user-attachments/assets/403a4f84-1d71-4df2-aaac-653f397a3f18" />
+
+The user James White has been added to the IT Organizational Unit.
+
+---
+<img width="1036" height="148" alt="OU created via pwrSSH" src="https://github.com/user-attachments/assets/ebc2402b-5c88-47e5-9ce8-71474fe21a34" />
+
+OU created via PowerShell.
+
+---
+
+<img width="798" height="170" alt="User created in the OU via PWRSSH" src="https://github.com/user-attachments/assets/090750b2-19e6-4449-8fd3-7a3c0e78be8d" />
+
+User created via PowerShell. 
+
+---
+
+<img width="1012" height="176" alt="User created and verified" src="https://github.com/user-attachments/assets/525849cf-de8b-47ad-b6d1-12f00b6c3504" />
+
+Verifying the user and OU were created via PowerShell. 
 
 
 
