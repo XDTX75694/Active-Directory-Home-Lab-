@@ -158,6 +158,30 @@ Installation of all the configurations.
 After the configurations are installed, it will prompt you to restart to apply the changes. As shown in this photo, the configurations were installed successfully, and the local domain of DALE is now installed.  
 
 ---
+<img width="925" height="650" alt="Creating users and groups " src="https://github.com/user-attachments/assets/ab6eeeae-e134-4ad3-b61a-4249d69d4c54" />
+
+Now that Active Directory has been installed, we want to create new users and Organizational Units. To add these, go to Tools on the top right and click on Active Directory Users and Computers. 
+
+---
+<img width="663" height="536" alt="image" src="https://github.com/user-attachments/assets/0aef0b4a-f6a5-4cce-8e30-59ed40595181" />
+
+---
+<img width="770" height="528" alt="Creating an OU in AD" src="https://github.com/user-attachments/assets/eaa5fcf5-9eaa-43c6-acae-e87cdf682ae2" />
+
+---
+
+<img width="500" height="500" alt="Created IT OU" src="https://github.com/user-attachments/assets/bd4fcb2c-aabb-4e4a-b301-90702108fb28" />
+
+
+I created two OUs: one for IT and one for HR. James White of IT and John Smith for HR. The OU and user for HR will be created using PowerShell, and the IT OU will be created in Active Directory. To create a new Organizational Unit (OU), right-click on `dale.local`, go down to New, and click on Organizational Unit. After creating the new OU, it will appear. 
+
+---
+<img width="988" height="455" alt="image" src="https://github.com/user-attachments/assets/0eb8e23e-763b-423d-96fc-146c37e4824c" />
+
+To add a new user to the OU, you right-click on the on IT, go to New, and select User.   
+---
+
+
 
 
 
