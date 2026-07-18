@@ -115,7 +115,7 @@ The second screenshot just shows the Virtual Machine being connected to the new 
 
 <img width="1001" height="887" alt="Name change" src="https://github.com/user-attachments/assets/cb923e51-5834-4b36-8fdd-0e35d28e0371" />
 
-To make it easy to identify this server on the network, I went and changed the name of the computer to ACDC01. 
+To make it easier to identify this server on the network, I changed the computer's name to ACDC01. 
 
 ---
 
@@ -139,9 +139,15 @@ To use Active Directory, it needs to be installed by clicking on Manage on the t
 
 After the install is complete for Active Directory, the server needs to be promoted to a Domain Controller so it turns into the core authority of the network.  
 
+---
+<img width="772" height="568" alt="Deployment config" src="https://github.com/user-attachments/assets/2fe239d9-000b-44f9-a8ac-18a3226b85a1" />
 
+Configuring the root domain name (dale.local) when promoting the server to Active Directory Domain Services. The root domain is the top-level namespace for the entire Active Directory forest. Every computer, user, and group created afterward belongs to this domain, and it's what devices use to locate the domain controller for logins, Group Policy, and DNS resolution. Using `.local` keeps the domain isolated from real public DNS. 
 
+---
+<img width="914" height="631" alt="Installing prerecs" src="https://github.com/user-attachments/assets/1ec25455-9734-4ee4-adc9-75aa02195467" />
 
+Installation of all the configurations.  
 
 
 
