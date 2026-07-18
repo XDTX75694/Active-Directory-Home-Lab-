@@ -8,7 +8,7 @@ This project simulates a small corporate network to practice real-world system a
  
  ► Deployed a Windows Server 2022 domain controller (AD DS, DNS, Group Policy)
 
- ► Configured and deployed Ubuntu server for the use of Splunk
+ ► Configured and deployed Ubuntu server for use with Splunk
  
  ► Managed users, groups, and OUs via GUI and PowerShell
  
@@ -90,11 +90,57 @@ To change the adapter settings and make a static IP, you go to the network icon,
 ---
 <img width="500" height="500" alt="IP Version 4 " src="https://github.com/user-attachments/assets/0c63eccf-a362-4b00-8ffc-873609cde5a0" />
 
-After clicking Properties and double-clicking on Internet Protocol Version 4 (IPv4) to configure a static IP for the server. (The static IP configuration is shown below.)
+After clicking Properties and double-clicking on Internet Protocol Version 4 (IPv4) to configure a static IP for the server. A static IP was created to identify the workstation more easily. (The static IP configuration is shown below)
 
 ---
 
 <img width="600" height="550" alt="Static IP" src="https://github.com/user-attachments/assets/dd092605-1868-475f-8529-b0067d2ff99a" />
+
+---
+
+<img width="970" height="323" alt="Checking IP change" src="https://github.com/user-attachments/assets/5480ebb1-9ea3-4dc9-b1ea-2918d0ae0c9f" />
+
+After setting up the static IP address, we need to verify the change by using Command Prompt, which is a command-line interface. To verify the new IP, I used the ipconfig command to show the current IP, and the change was successful.
+
+---
+<img width="923" height="654" alt="Changing NAT network to have slash 24" src="https://github.com/user-attachments/assets/6aa917f2-007a-4ee7-aee4-025c5170da17" />
+<img width="937" height="788" alt="Win server on network" src="https://github.com/user-attachments/assets/b72b68bd-8b38-4809-ad45-a3f4ac65db50" />
+
+
+For all the virtual machines to be reachable on the same network, I created a new Network Address Translation (NAT) for all the operating systems to be able to communicate with each other, as seen in the first screenshot.
+
+The second screenshot just shows the Virtual Machine being connected to the new NAT network. 
+
+---
+
+<img width="1001" height="887" alt="Name change" src="https://github.com/user-attachments/assets/cb923e51-5834-4b36-8fdd-0e35d28e0371" />
+
+To make it easy to identify this server on the network, I went and changed the name of the computer to ACDC01. 
+
+---
+
+<img width="1014" height="760" alt="Adding users and roles " src="https://github.com/user-attachments/assets/411ab064-0703-42b7-8c9a-bc7ac74622ef" />
+
+To use Active Directory, it needs to be installed by clicking on Manage on the top right and then clicking Add Roles and Features bring you into the wizard as shown in the screenshots below. 
+
+---
+
+<img width="997" height="706" alt="The settings " src="https://github.com/user-attachments/assets/7c4a6334-6a34-4678-9f8b-c45788580cce" />
+
+---
+
+<img width="688" height="345" alt="AD Domin services " src="https://github.com/user-attachments/assets/15c20627-d16d-4f4c-9ee2-446cc3c5e06e" />
+
+---
+<img width="944" height="633" alt="Installing features " src="https://github.com/user-attachments/assets/b81461e7-6469-4470-8658-a73e8834b18b" />
+
+---
+<img width="453" height="261" alt="Promoting server to a domain controler" src="https://github.com/user-attachments/assets/aac7c92f-86d2-4338-acfb-9c6376c2bb88" />
+
+After the install is complete for Active Directory, the server needs to be promoted to a Domain Controller so it turns into the core authority of the network.  
+
+
+
 
 
 
