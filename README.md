@@ -1,7 +1,7 @@
 # Active Directory Home Lab
 # Objective
 
-This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry.
+This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry. This lab displays the installation and configuration of Windows Server, Windows 10, Ubuntu Server, Splunk, Sysmon, and Kali Linux. 
 
 # Skills Learned
  ► Using and configuring virtual machines using VMware software
@@ -36,7 +36,7 @@ This project simulates a small corporate network to practice real-world system a
 `Scripting`
 
 ---
-# Network Architecture
+# Network Diagram
 
  
 <img width="600" height="775" alt="image" src="https://github.com/user-attachments/assets/7e3b95cb-77a6-4dbb-a500-a4842c790499" />
@@ -71,7 +71,7 @@ Specs for the Windows Server include 50GB of hard drive space, 4096 MB or 4 GB o
 
 <img width="908" height="668" alt="Server version " src="https://github.com/user-attachments/assets/35aae4af-955d-4c94-abf5-d9868f55534f" />
 
-Selecting the version to use with Windows Server 2022. The highlighted version was chosen because it provides a graphical user interface (GUI).   
+Selecting the version to use with Windows Server 2022. The highlighted version was chosen because it provides a graphical user interface (GUI) instead of using a command-line interface.   
 
 ---
 <img width="1203" height="820" alt="Admin" src="https://github.com/user-attachments/assets/11847fde-1e74-40ef-a852-20ee8e3bd9f1" />
@@ -81,7 +81,7 @@ Administrator username and password are being created.
 ---
 <img width="1099" height="819" alt="Complete install" src="https://github.com/user-attachments/assets/4dd9642a-ab1d-4b32-964a-f990f7fdfbbb" />
 
-Installation of the server completed.
+Installation of the Windows Server is complete.
 
 ---
 <img width="1014" height="982" alt="Changing IP" src="https://github.com/user-attachments/assets/66555a7e-d571-4066-9e0e-7bec9cd31338" />
@@ -95,6 +95,8 @@ After clicking Properties and double-clicking on Internet Protocol Version 4 (IP
 ---
 
 <img width="600" height="550" alt="Static IP" src="https://github.com/user-attachments/assets/dd092605-1868-475f-8529-b0067d2ff99a" />
+
+[Reference the network diagram above](#network-architecture).
 
 ---
 
@@ -148,6 +150,15 @@ Configuring the root domain name (dale.local) when promoting the server to Activ
 <img width="914" height="631" alt="Installing prerecs" src="https://github.com/user-attachments/assets/1ec25455-9734-4ee4-adc9-75aa02195467" />
 
 Installation of all the configurations.  
+
+---
+
+<img width="1060" height="925" alt="AD settings applyed" src="https://github.com/user-attachments/assets/31011ba4-662d-4af3-b4bd-3d09bd04f695" />
+
+After the configurations are installed, it will prompt you to restart to apply the changes. As shown in this photo, the configurations were installed successfully, and the local domain of DALE is now installed.  
+
+---
+
 
 
 
