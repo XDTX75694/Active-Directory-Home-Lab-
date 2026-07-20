@@ -1,7 +1,7 @@
 # Active Directory Home Lab
 # Objective
 
-This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine used to generate test telemetry. This lab displays the installation and configuration of Windows Server, Windows 10, Ubuntu Server, Splunk, Sysmon, and Kali Linux. 
+This project simulates a small corporate network to practice real-world system administration, Active Directory management, and security monitoring. The lab consists of a Windows Server 2022 domain controller, a Windows 10 client joined to the domain, an Ubuntu server, and Splunk. Kali Linux attacker machine is used to generate test telemetry. This lab displays the installation and configuration of Windows Server, Windows 10, Ubuntu Server, Splunk, Sysmon, and Kali Linux. 
 
 # Skills Learned
  ► Using and configuring virtual machines using VMware software
@@ -47,7 +47,7 @@ This project simulates a small corporate network to practice real-world system a
  
 ---
 ## Table of Contents
-- [Windows Server 2022 Setup](#windows-server-2022-setup)
+- [Windows Server 2022 Setup](windows-server-setup.md)
 - [Windows 10 Client Setup & Domain Join](#windows-10-client--domain-join)
 - [Splunk & Sysmon Deployment](#splunk-siem--sysmon-deployment)
 - [Active Directory Deployment](#active-directory-structure)
