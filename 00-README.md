@@ -48,7 +48,7 @@ This project simulates a small corporate network to practice real-world system a
 ---
 ## Table of Contents
 - [Windows Server 2022 Setup & AD Deplyment](01-Window-Server-Setup.md)
-- [Windows 10 Client Setup & Domain Join](#windows-10-client--domain-join)
+- [Windows 10 Client Setup & Domain Join](02-Windows-10-Client-Setup-&-Domain-Join.md)
 - [Splunk & Sysmon Deployment](#splunk-siem--sysmon-deployment)
 - [Blocking Social Media Using Group Policy](#blocking-social-media-using-group-policy)
 - [Attack Simulation with Kali Linux](#attack-simulation-with-kali-linux)
