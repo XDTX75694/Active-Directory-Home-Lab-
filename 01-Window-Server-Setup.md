@@ -1,7 +1,9 @@
 # Windows Server 2022 Setup
-
+---
 ### Section Objective:
 This section covers building the Windows Server 2022 virtual machine from scratch and turning it into a domain controller — the central server that manages user accounts, computers, and security policies for the entire network. 
+
+---
 
 <img width="1919" height="1024" alt="server 22 ISO" src="https://github.com/user-attachments/assets/1ccf8153-2217-48d9-9566-33ff4d38dfbb" />
 Using the setup wizard for installing Windows Server 2022 from an ISO file, the disc image is used to set up the operating system. 
