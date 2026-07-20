@@ -1,7 +1,7 @@
  # Windows Server 2022 Setup
 ---
 ## **<ins>Section Objective:</ins>**
-This section covers building the Windows Server 2022 virtual machine from scratch and turning it into a domain controller — the central server that manages user accounts, computers, and security policies for the entire network. 
+This section covers building a Windows Server 2022 virtual machine using VMware and configuring it as a domain controller — the central server that manages user accounts, computers, and security policies for the entire network. 
 
 ---
 
