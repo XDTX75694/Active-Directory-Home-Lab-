@@ -20,7 +20,7 @@ The configuration screen looks different from the Windows config screen because 
 
 <img width="600" height="250" alt="Installing most UTD version " src="https://github.com/user-attachments/assets/96210262-1ff2-4e2b-b5b9-cee8da24c77c" />
 
-I use sudo apt-get update && sudo apt-get upgrade -y to keep the server current. The first part checks what updates are available, and the second part installs them all automatically without needing manual approval that keeps the system secure and up to date with one command.
+I use sudo apt-get update && sudo apt-get upgrade -y to keep the server current. The first part checks what updates are available, and the second part installs them all automatically without needing manual approval, which keeps the system secure and up to date with one command.
 
 ---
 
@@ -68,13 +68,20 @@ In VMware's settings, I enabled Shared Folders, a feature that bridges my comput
 
 <img width="903" height="251" alt="Creating a directory to install splunk from shared folder" src="https://github.com/user-attachments/assets/6acce36a-b58f-4d9f-a8cb-520d8d6427af" />
 
-ijhklhjklkjl
+After enabling Shared Folders in VMware, I connected it inside the Linux server using the commands below. The Splunk folder from my host computer is now visible on the server.
+
+`sudo mkdir /mnt/hgfs` — Creates a new folder for the shared files.
+
+`sudo mount ...` — Links the shared folder to the file location.
+
+`cd /mnt/hgfs and ls` — The cd command changes the folder directory, and the ls command lists the files inside the directory. 
 
 ---
 
 <img width="749" height="265" alt="Inside folder" src="https://github.com/user-attachments/assets/74d2ade4-632d-45fb-97bf-6f35d21a6b83" />
 
-gfhgfhgfhfgh
+Inside the shared folder, I changed into the Splunk installer file and ran the installation command `sudo dpkg -i splunk*.deb` to install the software for Splunk.
+
 ---
 
 <img width="622" height="213" alt="Download complete" src="https://github.com/user-attachments/assets/65d5769e-7fb7-4eef-bb18-b28d247e6453" />
