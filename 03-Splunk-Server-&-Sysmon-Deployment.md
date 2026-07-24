@@ -5,6 +5,7 @@
 This section covers deploying Splunk as the lab's SIEM (Security Information and Event Management) system on an Ubuntu server, and installing Sysmon on the Active Directory server and Windows 10 client. Splunk collects and centralizes logs from across the network, while Sysmon provides detailed endpoint telemetry, such as process creation and network connections, which is forwarded to Splunk. Together, these tools make it possible to search, analyze, and detect suspicious activity. 
 
 ---
+
 <img width="550" height="500" alt="Making sever more beefy" src="https://github.com/user-attachments/assets/544d667e-edfa-4f43-837d-2c2378544085" />
 
 The Splunk Server is a bit beefier than the rest of the VMs because it will be ingesting data and running searches. The specs of the server are 95GB of storage, 8 GB of RAM, and 4 CPU cores.  
@@ -13,57 +14,62 @@ The Splunk Server is a bit beefier than the rest of the VMs because it will be i
 
 <img width="1283" height="410" alt="Account setup" src="https://github.com/user-attachments/assets/3f335b50-cbf3-4003-9150-eb4ea1cbb868" />
 
-The profile configuration screen looks different than Windows, as some Linux distributions and versions are command-line interface only.
+The configuration screen looks different from the Windows config screen because some Linux distributions and versions are command-line interface only.
 
 ---
+
 <img width="600" height="250" alt="Installing most UTD version " src="https://github.com/user-attachments/assets/96210262-1ff2-4e2b-b5b9-cee8da24c77c" />
 
-For the server to update to the current version and be up to date, the command that is used is `sudo apt-get update && sudo apt-get upgrade -y` (Explain what the command does)
+I use sudo apt-get update && sudo apt-get upgrade -y to keep the server current. The first part checks what updates are available, and the second part installs them all automatically without needing manual approval that keeps the system secure and up to date with one command.
 
 ---
+
 <img width="887" height="619" alt="Sever is updated " src="https://github.com/user-attachments/assets/42e51c78-9d1e-4e17-81cb-5406f3e2a05e" />
 
-After entering that command, it will give you this confirmation page, and the server will restart all services. It is always a good practice to restart the server for changes to apply  
+Once the command completes, a confirmation screen verifies the updates were successfully installed, and the server restarts its services. A good practice is to reboot the system to ensure every change is fully applied if not prompted to.
 
 ---
 <img width="657" height="170" alt="installing network with static ip" src="https://github.com/user-attachments/assets/25c5a192-ac8a-4e93-8588-75d3e83ecd30" />
 
-Static network config command  
+Editing the Netplan configuration file (00-installer-config.yaml) to set a static IP — this gives the server a permanent network address, which is essential for services like DNS and Active Directory that other machines depend on.
 
 ---
 
 <img width="863" height="671" alt="Setting up static ip" src="https://github.com/user-attachments/assets/2a7f2878-1291-4ac3-a210-6d521a056e8a" />
 
-Configuring static IP using YAML. 
+Configuring the server's static IP, gateway, and DNS in YAML, a human-readable configuration format that Ubuntu's networking system requires. YAML is strict about spacing and indentation and requires precise formatting to work. Defining these settings manually makes the server's IP static. 
 
 ---
 
 <img width="956" height="661" alt="Settings applyed" src="https://github.com/user-attachments/assets/bbffb83e-d041-4ef1-b970-e67a2453b932" />
 
-Showing config was applied
+Running `sudo netplan apply` confirms that the server's static IP was applied and saved. 
 
 ---
 
 <img width="830" height="263" alt="IP has changed" src="https://github.com/user-attachments/assets/2bbe4ae5-ebe5-4042-8329-e431bdb74d52" />
 
-
-Showing IP has changed to a static IP. 
+Using the `ip a command` to display the server's network details, this is a second way to verify that the static IP address was applied correctly.
 
 ---
 
 <img width="813" height="320" alt="Insalling tool to help install splunk" src="https://github.com/user-attachments/assets/0c691b97-8f16-4ca4-85d7-4b96fbe8366b" />
 
+Before the Splunk deployment, the Linux virtual machine was prepared with open-vm-tools — VMware's guest utilities — to ensure stable performance and reliable communication with the virtualization 
+
 ---
 
 <img width="759" height="730" alt="adding splunk file for download" src="https://github.com/user-attachments/assets/4ba536ca-f8d6-4b26-86bc-7e937213114d" />
-
----
 <img width="761" height="730" alt="File Path to splunk folder" src="https://github.com/user-attachments/assets/00208c25-5dd5-4317-8d87-1dfcd19e5895" />
 
+In VMware's settings, I enabled Shared Folders, a feature that bridges my computer and the virtual machine so files can be passed directly between them. This is how the Splunk installer gets transferred onto the Linux server, as shown in the two photos above. 
+
 ---
+
 <img width="903" height="251" alt="Creating a directory to install splunk from shared folder" src="https://github.com/user-attachments/assets/6acce36a-b58f-4d9f-a8cb-520d8d6427af" />
 
 ijhklhjklkjl
+
 ---
 
 <img width="749" height="265" alt="Inside folder" src="https://github.com/user-attachments/assets/74d2ade4-632d-45fb-97bf-6f35d21a6b83" />
