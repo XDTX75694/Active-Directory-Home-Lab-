@@ -86,34 +86,37 @@ Inside the shared folder, I changed into the Splunk installer file and ran the i
 
 <img width="622" height="213" alt="Download complete" src="https://github.com/user-attachments/assets/65d5769e-7fb7-4eef-bb18-b28d247e6453" />
 
-fgeddfgdfgdfg
+Installing Splunk using `dpkg.` The first attempt failed because Linux filenames are case-sensitive — the actual file was named `splunk-9.4.1...deb` (lowercase), not Splunk*.deb. Correcting the case resolved the error, and the package installed successfully. 
+
 ---
 
 <img width="826" height="383" alt="Users and groups belong to splunk" src="https://github.com/user-attachments/assets/182e187b-ab62-4ecf-a845-0aaf87b96583" />
 
-fgdergvbrsfdhgbfsdhg
+Confirming the Splunk installation directory (/opt/splunk) is owned by a dedicated Splunk user and group, rather than root — a security best practice so Splunk runs with only the permissions it actually needs, instead of full system privileges.
+
 ---
 
 <img width="844" height="687" alt="Terms and conditons " src="https://github.com/user-attachments/assets/9af87055-84b4-44de-98d9-1a05607cdeb5" />
 
-gfdgdfgfdgdf
+Reviewing and accepting Splunk's license agreement (y) to complete the installation.
+
 ---
 
 <img width="713" height="180" alt="Installed and making splunk start up apon booting" src="https://github.com/user-attachments/assets/1e45a8f8-8f3e-407c-8c0c-b8782acb0173" />
 
-Splunk boot on startup
+Splunk is now accessible through its web interface at http://splunk:8000. After exiting the Splunk user session, boot-start is enabled so Splunk automatically launches under the splunk user any time the server restarts.
 
 ---
 
 <img width="508" height="48" alt="WIll now run when booted " src="https://github.com/user-attachments/assets/416fcad5-3864-4de3-95ce-8d2dffceb20e" />
 
-Runs Splunk after restart 
+Confirming the boot-start init script was installed and configured to run automatically at boot.
 
 ---
 
 <img width="1031" height="766" alt="Checking server access" src="https://github.com/user-attachments/assets/67340e46-c6f6-461b-be98-8b97e8289e0a" />
 
-Seeing if Splunk is working on server and client computers.
+After installing Splunk on the Linux server, I switched to the Windows Server client to confirm I could connect and that the web interface was working correctly.
 
 ---
 
