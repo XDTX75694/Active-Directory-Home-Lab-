@@ -86,13 +86,13 @@ Inside the shared folder, I changed into the Splunk installer file and ran the i
 
 <img width="622" height="213" alt="Download complete" src="https://github.com/user-attachments/assets/65d5769e-7fb7-4eef-bb18-b28d247e6453" />
 
-Installing Splunk using `dpkg.` The first attempt failed because Linux filenames are case-sensitive — the actual file was named `splunk-9.4.1...deb` (lowercase), not Splunk*.deb. Correcting the case resolved the error, and the package installed successfully. 
+Installing Splunk using `dpkg.` The first attempt failed because Linux filenames are case-sensitive. Correcting the case resolved the error, and the package installed successfully. 
 
 ---
 
 <img width="826" height="383" alt="Users and groups belong to splunk" src="https://github.com/user-attachments/assets/182e187b-ab62-4ecf-a845-0aaf87b96583" />
 
-Confirming the Splunk installation directory (/opt/splunk) is owned by a dedicated Splunk user and group, rather than root — a security best practice so Splunk runs with only the permissions it actually needs, instead of full system privileges.
+Confirming the Splunk installation directory (/opt/splunk) is owned by a dedicated Splunk user and group, rather than root which is a good security practice so Splunk runs with only the permissions it actually needs instead of full system privileges.
 
 ---
 
@@ -104,7 +104,7 @@ Reviewing and accepting Splunk's license agreement (y) to complete the installat
 
 <img width="713" height="180" alt="Installed and making splunk start up apon booting" src="https://github.com/user-attachments/assets/1e45a8f8-8f3e-407c-8c0c-b8782acb0173" />
 
-Splunk is now accessible through its web interface at http://splunk:8000. After exiting the Splunk user session, boot-start is enabled so Splunk automatically launches under the splunk user any time the server restarts.
+Splunk is now accessible through its web interface at `192.168.10.10:8000`. After exiting the Splunk user session, boot-start is enabled so Splunk automatically launches under the splunk user any time the server restarts.
 
 ---
 
@@ -116,25 +116,33 @@ Confirming the boot-start init script was installed and configured to run automa
 
 <img width="1031" height="766" alt="Checking server access" src="https://github.com/user-attachments/assets/67340e46-c6f6-461b-be98-8b97e8289e0a" />
 
-After installing Splunk on the Linux server, I switched to the Windows Server client to confirm I could connect and that the web interface was working correctly.
+After installing Splunk on the Linux server, I switched to the Windows Server client to confirm that the Splunk interface was reachable at 192.168.10.10:8000 via web browser. 
 
 ---
 
 <img width="941" height="787" alt="insatlling the UF for splunk" src="https://github.com/user-attachments/assets/dd30e44e-aa8d-4164-87a1-1fd73c346057" />
 
-Installing Slunk Universal Forwarder. 
+After configuring the Splunk server, the next step is to install Universal Forwarder for Splunk. This is a lightweight agent installed as the central hub that stores and analyzes data behind the scenes, collecting each machine's logs and sending them back to the Splunk server to anaylsis. 
 
 ---
 
 <img width="861" height="632" alt="Installer popup" src="https://github.com/user-attachments/assets/93ef9747-fdab-4ff7-8ada-55b00ed60bda" />
 
-Installer popup wizard. 
+---
+
+<img width="793" height="584" alt="image" src="https://github.com/user-attachments/assets/aecb1333-6a42-46ea-b5a0-4f5060be7768" />
+
+Running the Universal Forwarder installer (shown in the screenshot above) launches a setup wizard. In the setup wizard, I pointed the forwarder to the Splunk server using the static IP `192.168.10.10`and using `port 9997`, which is the standard port Splunk uses to receive logs. This tells the forwarder where to send data that is being collected. 
+
+---
+
+<img width="816" height="417" alt="image" src="https://github.com/user-attachments/assets/ad5b2e38-5317-4907-801e-c5d089291ef3" />
+
+Next, Sysmon will be installed. Sysmon is a free Microsoft tool that upgrades Windows' basic logging to record detailed activity like programs launched, network connections, and file changes. The Universal Forwarder then ships logs to the Splunk server. 
 
 ---
 
 <img width="1027" height="761" alt="Symon olaf to with splunk" src="https://github.com/user-attachments/assets/0079951d-cad6-4505-a40a-6b53536ea53c" />
-
-<img width="1031" height="735" alt="downloading sysmon" src="https://github.com/user-attachments/assets/7d0b958d-f5f2-4b5b-bbe4-566c7301b182" />
 
 Downloading sysmon and olaf for splunk
 
