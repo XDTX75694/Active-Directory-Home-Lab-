@@ -138,13 +138,13 @@ Running the Universal Forwarder installer (shown in the screenshot above) launch
 
 <img width="816" height="417" alt="image" src="https://github.com/user-attachments/assets/ad5b2e38-5317-4907-801e-c5d089291ef3" />
 
-Next, Sysmon will be installed. Sysmon is a free Microsoft tool that upgrades Windows' basic logging to record detailed activity like programs launched, network connections, and file changes. The Universal Forwarder then ships logs to the Splunk server. 
+Next, Sysmon will be installed. Sysmon is a free Microsoft tool that enhances Windows' basic logging to record detailed activity, such as program launches, network connections, and file changes. The Universal Forwarder then ships logs to the Splunk server. 
 
 ---
 
 <img width="1027" height="761" alt="Symon olaf to with splunk" src="https://github.com/user-attachments/assets/0079951d-cad6-4505-a40a-6b53536ea53c" />
 
-Downloading sysmon and olaf for splunk
+Sysmon needs a configuration file telling it which events to record, so rather than writing one from scratch, there is an industry-trusted Sysmon-Modular configuration by Olaf Hartong. This open-source community-maintained project acts as a preconfiguration for Sysmon. This captures the telemetry needed to detect real-time activities to watch for and log to ensure the right visibility to hunt for threats.
 
 ---
 
@@ -152,20 +152,19 @@ Downloading sysmon and olaf for splunk
 
 <img width="770" height="138" alt="Command to install Sysmon using powershell" src="https://github.com/user-attachments/assets/e577c5f0-8cbb-4d89-8f59-63ed28760965" />
 
-Sysmon command used in PowerShell and installed successfully. 
+With the configuration file downloaded, I installed the Sysmon config file by running `PS C:\Sysmon.exe -i ..\sysmonconfig.xml` in PowerShell as administrator. The `-i flag` is used to install Sysmon as a Windows service and applies the Olaf config that dictates what to monitor. The output confirms that Sysmon is now running and monitoring any changes in the background.
 
 ---
 
 <img width="807" height="617" alt="Inputs conf file for slunk server" src="https://github.com/user-attachments/assets/5cb48341-2005-4cd6-bde6-395d8bb2bbdb" />
+
 <img width="799" height="613" alt="Config file saved in the local file for splunk UF" src="https://github.com/user-attachments/assets/757b1f3a-27e3-44db-8f07-d151408345c6" />
 
-inputs.comf file (explain what it is) and creating a new inputs.comf (Explain why an new file was created.)
-
----
+The next step is telling the Universal Forwarder which logs to send to Splunk, and that's controlled by a file called `inputs.conf.` The first screenshot shows the default version file that is used with the forwarder that is located in the program's `default folder`. The second screenshot, a `new inputs.conf` created in the `local folder`. The reason you want to create a new config file in the `local folder` is so you can fall back on it if a configuration mistake is ever made. The new config file collects  logs from Application, Security, System, and Sysmon events.
 
 <img width="857" height="605" alt="In services tab to chance to local host for logs to save " src="https://github.com/user-attachments/assets/e115a6f0-48df-476b-9ba1-5fddd519d399" />
 
-In the Services tab, change the setting to localhost. 
+After saving the new config file, I opened Windows Services and adjusted the SplunkForwarder service to log on as the Local System account. By default, the forwarder runs under a limited account that can't read protected logs like Security events. Switching to Local System gives the service the permissions it needs to access all the logs specified in inputs.conf and forward them to Splunk.
 
 ---
 
