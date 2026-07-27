@@ -188,11 +188,20 @@ Creating a new index called endpoint (Settings → Indexes → New Index). An in
 
 <img width="1012" height="74" alt="Endpoint created" src="https://github.com/user-attachments/assets/ce039570-28b8-426b-8591-78ff5f794c8e" />
 
-Endpoint created
+The new index now shows up as the named endpoint that was created.
 
 ---
 
+
+<img width="1214" height="512" alt="image" src="https://github.com/user-attachments/assets/ba543ab4-f24f-463a-91fb-6673362fe60d" />
+
+<img width="1251" height="322" alt="image" src="https://github.com/user-attachments/assets/e94a2750-a199-436f-99f5-43cbe01b7f73" />
+
 <img width="1003" height="506" alt="Config of port for Splunk" src="https://github.com/user-attachments/assets/e22f9737-9ea5-489e-9292-8f2ebf2389c3" />
+
+The final piece is telling Splunk to listen for incoming data. In `Settings → Forwarding and receiving` I clicked `Configure receiving`, and since no port existed yet, created one on 9997 — the same port the forwarder sends to. With both sides matching, the pipeline is complete.
+
+
 
 Configuring the port that Splunk will run on, which is 9997. 
 
