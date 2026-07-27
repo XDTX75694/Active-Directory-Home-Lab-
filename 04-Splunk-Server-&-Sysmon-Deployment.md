@@ -164,25 +164,25 @@ The next step is telling the Universal Forwarder which logs to send to Splunk, a
 
 <img width="857" height="605" alt="In services tab to chance to local host for logs to save " src="https://github.com/user-attachments/assets/e115a6f0-48df-476b-9ba1-5fddd519d399" />
 
-After saving the new config file, I opened Windows Services and adjusted the SplunkForwarder service to log on as the Local System account. By default, the forwarder runs under a limited account that can't read protected logs like Security events. Switching to Local System gives the service the permissions it needs to access all the logs specified in inputs.conf and forward them to Splunk.
+After saving the `new config file`, I opened Windows Services and adjusted the SplunkForwarder service to log on as the Local System account. By default, the forwarder runs under a limited account that can't read protected logs like Security events. Switching to `Local System` gives the service the permissions it needs to access all the logs specified in `inputs.conf` and forward them to Splunk.
 
 ---
 
 <img width="752" height="513" alt="restarting service to update it " src="https://github.com/user-attachments/assets/4bc1695c-ef41-49e0-a095-e7a431c1a0c9" />
 
-Restarting splunkforwarder services to make it work.
+Restarting the SplunkForwarder service is required for it to load the new configuration and permissions. Once restarted, it begins collecting logs and starts forwarding them to Splunk. 
 
 ---
 
 <img width="1021" height="743" alt="Login to Splunk " src="https://github.com/user-attachments/assets/b4829e97-3393-4ad8-afcf-635bec7e90e1" />
 
-Logged in to the Splunk main page.
+Logged in to Splunk's main page, which is where the SIEM console is, where all forwarded logs arrive, and where security analysis happens.
 
 ---
 
 <img width="1005" height="706" alt="Creating new index named ENDPOINT" src="https://github.com/user-attachments/assets/10d59a1a-fa72-4949-ad3d-3376520379c9" />
 
-Creating a new index in Splunk called ENDPOINT.
+Creating a new index called endpoint (Settings → Indexes → New Index). An index is where Splunk stores incoming data and the forwarder's `inputs.conf` sends all logs to an index named "endpoint". This must exist for the data to arrive. 
 
 ---
 
