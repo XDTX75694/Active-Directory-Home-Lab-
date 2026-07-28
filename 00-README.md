@@ -51,7 +51,7 @@ This project simulates a small corporate network to practice real-world system a
 - [Windows 10 Client Setup & Domain Join](02-Windows-10-Client-Setup-&-Domain-Join.md)
 - [Blocking Social Media Using Group Policy](03-Blocking-Social-Media-Using-Group-Policy.md)
 - [Splunk Server & Sysmon Deployment](04-Splunk-Server-&-Sysmon-Deployment.md)
-- [Attack Simulation with Kali Linux](#attack-simulation-with-kali-linux)
+- [Attack Simulation with Kali Linux](05-Attack-Simulation-With-Kali-Linux)
 
 ---
  [Back to main page](https://github.com/XDTX75694)
