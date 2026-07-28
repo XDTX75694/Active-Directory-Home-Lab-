@@ -92,7 +92,7 @@ Installing Splunk using `dpkg.` The first attempt failed because Linux filenames
 
 <img width="826" height="383" alt="Users and groups belong to splunk" src="https://github.com/user-attachments/assets/182e187b-ab62-4ecf-a845-0aaf87b96583" />
 
-Confirming the Splunk installation directory (/opt/splunk) is owned by a dedicated Splunk user and group, rather than root which is a good security practice so Splunk runs with only the permissions it actually needs instead of full system privileges.
+Confirming the Splunk installation directory (/opt/splunk) is owned by a dedicated Splunk user and group, rather than root, which is a good security practice so Splunk runs with only the permissions it actually needs instead of full system privileges.
 
 ---
 
@@ -116,7 +116,7 @@ Confirming the boot-start init script was installed and configured to run automa
 
 <img width="1031" height="766" alt="Checking server access" src="https://github.com/user-attachments/assets/67340e46-c6f6-461b-be98-8b97e8289e0a" />
 
-After installing Splunk on the Linux server, I switched to the Windows Server client to confirm that the Splunk interface was reachable at 192.168.10.10:8000 via web browser. 
+After installing Splunk on the Linux server, I switched to the Windows client to confirm that the Splunk interface was reachable at 192.168.10.10:8000 via web browser. 
 
 ---
 
@@ -191,27 +191,27 @@ Creating a new index called endpoint (Settings → Indexes → New Index). An in
 The new index now shows up as the named endpoint that was created.
 
 ---
-
-
 <img width="1214" height="512" alt="image" src="https://github.com/user-attachments/assets/ba543ab4-f24f-463a-91fb-6673362fe60d" />
 
+---
 <img width="1251" height="322" alt="image" src="https://github.com/user-attachments/assets/e94a2750-a199-436f-99f5-43cbe01b7f73" />
 
+---
 <img width="1003" height="506" alt="Config of port for Splunk" src="https://github.com/user-attachments/assets/e22f9737-9ea5-489e-9292-8f2ebf2389c3" />
 
-The final piece is telling Splunk to listen for incoming data. In `Settings → Forwarding and receiving` I clicked `Configure receiving`, and since no port existed yet, created one on 9997 — the same port the forwarder sends to. With both sides matching, the pipeline is complete.
+The final piece is telling Splunk to listen for incoming data. In `Settings → Forwarding and receiving`, I clicked `Configure receiving`, and since no port existed yet, I used port 9997 for the forwarder to send to. With both sides matching, the pipeline is complete.
 
-
-
-Configuring the port that Splunk will run on, which is 9997. 
 
 ---
+<img width="1278" height="357" alt="image" src="https://github.com/user-attachments/assets/154c6e5e-5244-4401-ae68-a17d934a5cb7" />
 
+---
 <img width="1034" height="752" alt="Slunk is working " src="https://github.com/user-attachments/assets/c3dffa6f-237d-4f97-8bf8-8bda046b1d6d" />
 
-Splunk is configured and working. 
+---
+<img width="824" height="829" alt="image" src="https://github.com/user-attachments/assets/28d3464b-5cbb-4aa7-ba39-72c63d1ecc59" />
 
-
+With everything configured, I verified the index by going to `Apps → Search & Reporting` and searching `index=endpoint`. The results show 1,596 events from the client machine (Target-PC), with the source field confirming `Security`, `Application`, `System`, and `Sysmon logs` data being collected. The same setup was then repeated on the Windows Server machine.
 
 
 
