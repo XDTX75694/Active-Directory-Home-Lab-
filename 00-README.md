@@ -47,7 +47,7 @@ This project simulates a small corporate network to practice real-world system a
  
 ---
 ## Table of Contents
-- [Windows Server 2022 Setup & AD Deplyment](01-Window-Server-Setup.md)
+- [Windows Server 2022 Setup & AD Deployment](01-Window-Server-Setup.md)
 - [Windows 10 Client Setup & Domain Join](02-Windows-10-Client-Setup-&-Domain-Join.md)
 - [Blocking Social Media Using Group Policy](03-Blocking-Social-Media-Using-Group-Policy.md)
 - [Splunk Server & Sysmon Deployment](04-Splunk-Server-&-Sysmon-Deployment.md)
