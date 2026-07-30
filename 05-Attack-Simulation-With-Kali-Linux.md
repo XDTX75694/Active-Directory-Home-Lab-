@@ -51,12 +51,12 @@ Using the `head command` to list only 40 lines, as it contains 14 million lines 
 
 ---
 
-Shown in the screenshots below is editing the password.txt file using the `nano command` so I can add a commonly used password. In a real-world scenario, there would be lots of reconnaissance work before doing this kind of attack. After saving the changes in the file to double-check that it was saved, and then use the `cat` command to display the current contents of the file.    
+`Shown in the screenshots below` is editing the password.txt file using the `nano command` so I can add a commonly used password. In a real-world scenario, there would be lots of reconnaissance work before doing this kind of attack.
+
+After saving the changes in the file to double-check that it was saved, and then use the `cat` command to display the current contents of the file.    
 
 <img width="827" height="118" alt="Editing Passoword txt with NANO" src="https://github.com/user-attachments/assets/c4c296dc-0569-46ca-955f-8f33a8602701" />
-
 <img width="993" height="708" alt="CAT command used to show output of fiel" src="https://github.com/user-attachments/assets/950b6fc1-8ae3-4dab-9376-4af27be07f0c" />
-
 <img width="825" height="680" alt="USING NANO TO EDIT TXT fiel" src="https://github.com/user-attachments/assets/976dd99e-9528-4566-9481-ff5644dc68ba" />
 
 ---
@@ -73,7 +73,8 @@ Explain what the command is and what it's doing.
 
 ---
 
-<img width="658" height="60" alt="PWord FOUND!!!!" src="https://github.com/user-attachments/assets/ac7cd218-f8b1-4534-a59c-9935b0e8a81c" />
+<img width="787" height="552" alt="image" src="https://github.com/user-attachments/assets/67d952a2-24df-4679-9faa-b62549443b90" />
+
 
 The password was found.
 
@@ -85,10 +86,12 @@ Logging back into the Splunk interface and searching under the index that was cr
 ---
 <img width="595" height="253" alt="event code 4625 " src="https://github.com/user-attachments/assets/e6ea6207-d836-4e9e-b480-db7bfee365e7" />
 
+
 ---
 <img width="694" height="578" alt="Event shoud failed in login attempts meaing a Bruteforce attack has occured " src="https://github.com/user-attachments/assets/52dab609-2c8d-466a-8687-6865d01afc9b" />
 
 ---
+
 <img width="694" height="335" alt="BF finding the right pword and logging on " src="https://github.com/user-attachments/assets/8d9edeb5-63f6-4964-b541-bba736fcca4d" />
 
 ---
