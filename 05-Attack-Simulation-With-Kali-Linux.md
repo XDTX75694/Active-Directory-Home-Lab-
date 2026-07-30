@@ -84,16 +84,13 @@ The password was found.
 Logging back into the Splunk interface and searching under the index that was created to see if there were any events logged. 
 
 ---
-<img width="595" height="253" alt="event code 4625 " src="https://github.com/user-attachments/assets/e6ea6207-d836-4e9e-b480-db7bfee365e7" />
 
+<img width="1013" height="405" alt="400 events on splunk" src="https://github.com/user-attachments/assets/d38f4ba8-1964-4ac3-af2f-9b437d2c2e7e" />
 
----
-<img width="694" height="578" alt="Event shoud failed in login attempts meaing a Bruteforce attack has occured " src="https://github.com/user-attachments/assets/52dab609-2c8d-466a-8687-6865d01afc9b" />
-
----
-
-<img width="694" height="335" alt="BF finding the right pword and logging on " src="https://github.com/user-attachments/assets/8d9edeb5-63f6-4964-b541-bba736fcca4d" />
+400 events are found 
 
 ---
 
-<img width="711" height="584" alt="Shows pc name that login and ip of PC" src="https://github.com/user-attachments/assets/ff9bb29b-3303-4e88-b0d5-51e8bde6a8e1" />
+<img width="888" height="542" alt="Event code of the brute forece" src="https://github.com/user-attachments/assets/83f49f8f-7343-4309-ab2c-753981e21359" />
+
+Event code of `4625` if looked up, it means that there were failed login attempts made for this user 
