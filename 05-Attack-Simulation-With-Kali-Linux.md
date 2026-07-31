@@ -105,10 +105,16 @@ Clicking into the EventCode field breaks down exactly what type of activity was 
 
 <img width="794" height="599" alt="Show miltiple attemps to login every second" src="https://github.com/user-attachments/assets/47b8d048-cbf2-409f-be6d-1085fee1dfb0" />
 
-This event shows that there were login attempts at the same time.
+Clicking into an individual event shows the full detail Splunk captured. Repeated login attempts against the `jsmith` user account share the same 6:43 timestamp within the same second, showing that a brute-force attack took place. 
+
+The impact here is limited since jsmith is a `standard user` with restricted permissions. Against an   `administrator account` however could be far worse: privileged accounts carry high-level access that, if compromised, can be used to damage systems and spread across an entire environment.
+
 
 ---
 
 <img width="711" height="584" alt="Shows pc name that login and ip of PC" src="https://github.com/user-attachments/assets/3fc8a2de-adb8-4d88-bdac-504ed90b4f9b" />
 
-This shows that a loggin for an IP of `192.168.10.250` with the work station name of `Kali`. 
+Looking at the event reveals the attacker's origin. The log captures the Workstation Name `("kali")` and Source IP `(192.168.10.250)` and traces the attack back to the Kali machine. This is `Event ID 4624`, the `Windows code for a successful logon`. The log also shows the authentication used `NTLM` which is a common protocol brute-force tools target. The event IDs are evidence for a security analyst to determine if a cyberattack has happened.
+
+
+
