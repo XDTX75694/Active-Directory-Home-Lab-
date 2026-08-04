@@ -2,8 +2,7 @@
 ---
 ## **<ins>Section Objective:</ins>**
 
-This section shows the execution of an RDP brute-force simulation using Crowbar on Kali Linux to demonstrate how automated attacks exploit weak credentials, reinforcing the critical need for strict password length, complexity, and uniqueness policies
-
+This section shows the execution of an RDP brute-force simulation using `Crowbar` on Kali Linux to demonstrate how automated attacks exploit weak credentials. This demonstration will show why having a strict password policy is important for keeping users and organization secure.  
 ---
 <img width="1915" height="968" alt="image" src="https://github.com/user-attachments/assets/50caebd2-1097-4e18-b31f-cdd12852cbdf" />
 
