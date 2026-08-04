@@ -1,12 +1,12 @@
 # Windows 10 Configuration & Joining the Domain
 ---
 ## **<ins>Section Objective:</ins>**
-This section covers configuring the Windows 10 client machine and joining it to the dale.local domain, and the step that connect a regular workstation to the network managed by Active Directory. Once joined, the client can be logged into using domain user accounts, is visible and manageable from the domain controller, and is ready to receive Group Policy settings and forward logs to Splunk. Set up for Splunk will be shown in the next section.
+This section covers configuring the Windows 10 client machine and joining it to the dale.local domain, and the steps that connect a regular workstation to the network managed by Active Directory. Once joined, the client can be logged into using domain user accounts, is visible and manageable from the domain controller, and is ready to receive Group Policy settings and forward logs to Splunk. Set up for Splunk will be shown in the next section.
 
 ---
 <img width="1036" height="796" alt="Install complete" src="https://github.com/user-attachments/assets/34dba885-97e4-4a6f-8914-a105867097f2" />
 
-The setup for the client machine is nearly identical, with the only difference is chooseing Winodws 10 Pro workstation. The Pro version is used because it includes enterprise features like the ability to join a domain, Group Policy managment, and the use of the Remote Desktop Protocol (RDP), which the Home edition lacks.
+The setup for the client machine is nearly identical, with the only difference being choosing Windows 10 Pro workstation. The Pro version is used because it includes enterprise features like the ability to join a domain, Group Policy managment, and the use of the Remote Desktop Protocol (RDP), which the Home edition lacks.
 
 ---
 <img width="1027" height="726" alt="Changing PC name " src="https://github.com/user-attachments/assets/8522f7dd-562e-42cd-982d-1f0c3d72c675" />
@@ -16,13 +16,13 @@ Here we are changing the client's computer name to Target-PC, making it easier t
 ---
 <img width="828" height="653" alt="Change confirmed" src="https://github.com/user-attachments/assets/5e72998d-6813-4322-b283-068b731e8415" />
 
-Confirming the name change was successful. 
+I went back to the settings to confirm the name change was successful. 
 
 ---
 
 <img width="866" height="645" alt="ip change " src="https://github.com/user-attachments/assets/b4868872-6308-46ad-aa3e-d7303098d7f0" />
 
-Setting a static IP address `(192.168.10.100)` on the Windows 10 client, replacing the automatically assigned DHCP address shown in the original network diagram. A static IP keeps the client's connection to Splunk and other services stable across reboots, since a DHCP lease can change over time and break log forwarding or any firewall rules tied to a fixed address.
+I set a static IP address `(192.168.10.100)` on the Windows 10 client, replacing the automatically assigned DHCP address shown in the original network diagram. A static IP keeps the client's connection to Splunk and other services stable across reboots, since a DHCP lease can change over time and break log forwarding or any firewall rules tied to a fixed address.
 
 ---
 <img width="700" height="455" alt="image" src="https://github.com/user-attachments/assets/1d69e636-537b-4d59-a194-26c23801bf1c" />
@@ -49,8 +49,7 @@ After entering the domain information and clicking OK, a confirmation message ap
 ---
 <img width="688" height="473" alt="image" src="https://github.com/user-attachments/assets/71a87900-5891-487c-93f4-d92d327301e0" />
 
-Once the computer joins the domain, a restart is required for the changes to take effect. After rebooting, the login screen now accepts domain credentials instead of just the local account — shown below is James White's account (created earlier in Active Directory) being used to log in for the first time.  
-
+Joining the domain requires a restart for the changes to take effect. After rebooting, the login screen now accepts domain accounts rather than only the local one, and I signed in as James White, the user created earlier in Active Directory, for the first time.
 ---
 
 <img width="1038" height="835" alt="Loging in with JWHITE on the dale domain" src="https://github.com/user-attachments/assets/2f07c58a-134b-4271-a058-aee4e6138fcb" />
@@ -58,9 +57,10 @@ Once the computer joins the domain, a restart is required for the changes to tak
 ---
 
 <img width="994" height="709" alt="Both users are on there" src="https://github.com/user-attachments/assets/93d77b00-0771-43c5-9776-9b9efd6ea493" />
-The same process was repeated using John Smith's credentials, as shown in the screenshots above — confirming that both domain accounts, jsmith and jwhite, were set up and working correctly.
 
----
+I repeated the same process with John Smith's credentials, shown in the screenshots above. This confirms that both domain accounts, jsmith and jwhite, were created correctly and can authenticate against the domain controller.
+
+
 
 
 
