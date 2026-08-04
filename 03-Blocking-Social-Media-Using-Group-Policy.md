@@ -2,7 +2,7 @@
 ---
 ## **<ins>Section Objective:</ins>**
 
-This section covers blocking access to social media sites (`Facebook`, `Instagram`, and `YouTube`) across the domain using Group Policy. Instead of configuring each computer manually, I created a custom `hosts file` that blocks these sites, shared it from the Domain Controller, and used a GPO File Preference to push it automatically to HR and IT Organizational Units.
+This section covers blocking access to social media sites (`Facebook`, `Instagram`, and `YouTube`) across the domain using Group Policy. Group Policy is an `Active Directory` feature that lets administrators enforce settings on computers and users from a central location rather than configuring each machine by hand.
 
 ---
 
@@ -39,19 +39,42 @@ After saving the new text file, I renamed `hosts.txt` to just `hosts`. Windows w
 After saving the new hosts file, I created a new folder on the `C: drive` named `Social Media Blocking`. This folder acts as the central location where the file is stored and shared out to the rest of the clients on the domain.
 
 ---
-In order for this file to reach other clients, the folder has to be shared over the network with the right permissions otherwise the Group Policy won't be able to copy the file to each machine.  `(Seen in the 4 photos below)`
 
 <img width="502" height="524" alt="Sharing new folder over the network" src="https://github.com/user-attachments/assets/dd0b7c48-1da8-4b81-968b-8384483a7fae" />
+
+In order for this file to reach other clients, the folder has to be shared over the network with the right permissions otherwise, the Group Policy won't be able to copy the file to each machine.
+
+I right-clicked on the folder and selected Properties. From there, select Advanced sharing.    
 
 ---
 
 <img width="788" height="541" alt="Making sure permissions are set to at lease read only " src="https://github.com/user-attachments/assets/1fe17b87-fefa-4366-b60b-2e52a9f3578f" />
 
+Once in `Advanced Sharing`, I checked `Share this folder`, then clicked Permissions and confirmed that Everyone is set to `Read-only`. This matters because clients only need to read the file to copy. The other options are left unchecked so no one can tamper with the hosts file on the share.
+
 ---
 <img width="722" height="156" alt="New hosts file in the new share folder" src="https://github.com/user-attachments/assets/06e42564-95cc-4280-93c5-241942e58607" />
 
+After saving the share permissions, I dragged and dropped the new hosts file into the `Social Media Blocking` folder. This now makes it so this file will be copied when the new Group Policy is created.  
+
 ---
+
 <img width="305" height="263" alt="Copying network path" src="https://github.com/user-attachments/assets/981c778e-4d9c-4070-b69c-da01bd75a8f0" />
+
+Back on the Sharing tab, it now displays the network path as `\\ACDC01\Social Media Blocking`, which I copied to use as the source location in Group Policy.
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 
 
