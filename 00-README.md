@@ -53,4 +53,7 @@ This project simulates a small corporate network to gain hands-on experience wit
 - [Attack Simulation with Kali Linux](05-Attack-Simulation-With-Kali-Linux.md)
 
 ---
- [Back to main page](https://github.com/XDTX75694)
+ [Back to main page]( https://github.com/peter-dalesandro/XDTX7569)
+
+
+ https://github.com/peter-dalesandro/XDTX75694
