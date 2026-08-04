@@ -16,11 +16,9 @@ This project simulates a small corporate network to gain hands-on experience wit
  
  ► Deployed Sysmon and Splunk Forwarders for log collection
  
- ► Built Splunk dashboards to detect suspicious activity
+ ► Used Splunk dashboards to detect suspicious activity
  
  ► Simulated brute-force attack using Kali Linux
- 
- ► Hardened environment with Firewall rules and Group Policy
  ##
  
 ## Tools Used
