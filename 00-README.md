@@ -28,6 +28,7 @@ This project simulates a small corporate network to gain hands-on experience wit
 `Ubuntu Linux`
 `Kali Linux`
 `Active Directory` 
+`Group Policy`
 `Splunk`
 `Sysmon` 
 `PowerShell`
